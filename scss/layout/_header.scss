@@ -8,12 +8,17 @@
   padding: 30px 0;
   @include abstracts.breakpoint(lg) {
     padding: 16px 0;
+    box-shadow: 0px 20px 60px 10px var(--header-shadow);
   }
 }
 .top_header {
+  position: relative;
   @extend %flexItemCenter;
   @include abstracts.breakpoint(sm) {
     padding: 0 20px;
+  }
+  @include abstracts.breakpoint(lg) {
+    justify-content: space-between;
   }
 }
 .top-bar__more {
@@ -23,43 +28,52 @@
     padding: 4px 6px;
     width: 24px;
     height: 24px;
-    margin-right: 46px;
   }
 }
 .navbar {
-  margin-left: 144px;
+  margin-left: 129px;
   margin-right: auto;
   @include abstracts.breakpoint(lg) {
     display: none;
   }
   @include abstracts.breakpoint(xl) {
-    margin-left: 50px;
+    margin-left: 30px;
+  }
+  &--item {
+    &:hover .dropdown {
+      opacity: 1;
+    }
   }
 
   &__list {
     display: flex;
-    gap: 30px;
   }
 
   &__link {
-    display: flex;
+    @extend %flexItemCenter;
     gap: 6px;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.46667; /* 146.667% */
-
-    .row-down {
-      margin-top: 3px;
-    }
+    height: 50px;
+    padding: 0 15px;
+  }
+  .row-down {
+    margin-top: 3px;
+    width: 12px;
+    height: 12px;
   }
 }
 
 .top-act {
   @include abstracts.breakpoint(xl) {
     margin-left: auto;
+    gap: 20px;
+  }
+  @include abstracts.breakpoint(lg) {
+    margin-left: 0;
   }
   display: flex;
-
   gap: 30px;
   .top-act__group {
     @extend %flexItemCenter;
@@ -69,7 +83,7 @@
     background: var(--top-act-grp-bg);
     box-shadow: 0px 20px 60px 10px var(--top-act-grp-shadow);
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.breakpoint(lg) {
       display: none;
     }
     .top-act-sepharate {
