@@ -22,9 +22,7 @@
   }
 }
 .top-bar__more {
-  display: none;
   @include abstracts.breakpoint(lg) {
-    display: block;
     padding: 4px 6px;
     width: 24px;
     height: 24px;
@@ -33,20 +31,64 @@
 .navbar {
   margin-left: 129px;
   margin-right: auto;
-  @include abstracts.breakpoint(lg) {
-    display: none;
-  }
+  z-index: 9;
   @include abstracts.breakpoint(xl) {
     margin-left: 30px;
   }
+  @include abstracts.breakpoint(lg) {
+    inset: 0 50% 0 0;
+    position: fixed;
+    background: var(--navbar-side);
+    margin-left: 0;
+    padding: 20px 0;
+    translate: -100%;
+    transition: translate 0.5s;
+
+    &.show {
+      translate: 0;
+    }
+    &.show ~ &-overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  @include abstracts.breakpoint(md) {
+    inset: 0 20% 0 0;
+  }
+  &-close-btn {
+    display: none;
+    @include abstracts.breakpoint(lg) {
+      display: block;
+      padding: 10px 40px;
+    }
+  }
+  &-overlay {
+    visibility: hidden;
+    opacity: 0;
+    transform: opacity, visibility;
+    transition-duration: 0.5s;
+    @include abstracts.breakpoint(lg) {
+      // visibility: visible;
+      // opacity: 1;
+      position: fixed;
+      inset: 0;
+      z-index: 8;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+  }
   &--item {
     &:hover .dropdown {
-      opacity: 1;
+      display: block;
     }
   }
 
   &__list {
     display: flex;
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+      overflow-y: auto;
+      height: calc(100% - 26px);
+    }
   }
 
   &__link {
@@ -57,6 +99,13 @@
     line-height: 1.46667; /* 146.667% */
     height: 50px;
     padding: 0 15px;
+    @include abstracts.breakpoint(lg) {
+      justify-content: space-between;
+      padding: 0 40px;
+      font-family: Gordita;
+      font-size: 1.5rem;
+      line-height: 146.667%; /* 146.667% */
+    }
   }
   .row-down {
     margin-top: 3px;
@@ -66,6 +115,8 @@
 }
 
 .top-act {
+  display: flex;
+  gap: 30px;
   @include abstracts.breakpoint(xl) {
     margin-left: auto;
     gap: 20px;
@@ -73,8 +124,7 @@
   @include abstracts.breakpoint(lg) {
     margin-left: 0;
   }
-  display: flex;
-  gap: 30px;
+
   .top-act__group {
     @extend %flexItemCenter;
     min-width: 50px;
@@ -83,9 +133,6 @@
     background: var(--top-act-grp-bg);
     box-shadow: 0px 20px 60px 10px var(--top-act-grp-shadow);
 
-    @include abstracts.breakpoint(lg) {
-      display: none;
-    }
     .top-act-sepharate {
       width: 1px;
       height: 30px;
