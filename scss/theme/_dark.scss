@@ -10,6 +10,7 @@ html.dark {
   --top-act-grp-shadow: rgba(0, 0, 0, 0.2);
   --top-act-sepharate: #ededf6;
   --navbar-side: #292e39;
+  --home-heading: #fff;
   // dropdown
   --dropdown-bg-color: #363c49;
   --dropdown-shadown-color: rgba(23, 28, 40, 0.4);
@@ -19,7 +20,37 @@ html.dark {
   --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(464%) hue-rotate(202deg)
     brightness(99%) contrast(98%);
 
-  @include abstracts.breakpoint(lg) {
+  // category
+  --cate-item-backgruond: #171c28;
+  --cate-item-derc: #fff;
+  --cate-item-img-bg: #292e39;
+  --cate-face-before-color: #000;
+
+  // filter-btn
+  --filter-color: #fff;
+  --filter-btn-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(3380%) hue-rotate(317deg)
+    brightness(114%) contrast(100%);
+  --filter-btn-bg: #171c28;
+
+  // product card
+  --product-card-bg: #171c28;
+  --text-price: #fff;
+  --text-score: #fff;
+  --like-btn-bg: #292e39;
+  --filter-like-btn-bg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(299deg)
+    brightness(102%) contrast(102%);
+
+  // filter
+  --filter-form-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-border-input-color: #d2d1d6;
+  --filter-color-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(86deg)
+    brightness(104%) contrast(102%);
+  --filter-tag-bg: #171c28;
+  --filter-slider-psedu-bg: #292e39;
+  --filter-psedu-bg: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(1183%) hue-rotate(183deg)
+    brightness(89%) contrast(94%);
+  @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.2);
   }
 }

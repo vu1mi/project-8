@@ -5,13 +5,13 @@
   gap: 14px;
 
   .img-logo {
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
       width: 24px;
       height: 24px;
       display: block;
     }
   }
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     font-size: 1.8rem;
     gap: 10px;
   }
