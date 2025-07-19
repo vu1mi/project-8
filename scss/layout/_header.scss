@@ -164,3 +164,22 @@
     }
   }
 }
+
+.theme_darklight {
+  border: var(--btn-border-theme);
+  padding: 5px;
+  border-radius: 8px;
+  .icon-darklight {
+    width: 40px;
+    height: 40px;
+    filter: var(--filter_theme);
+    transition: transform 1s ease;
+  }
+}
+.theme_darklight:hover {
+  box-shadow: var(--btn-theme-shadow);
+  border-color: var(--btn-hover);
+  .icon-darklight {
+    transform: rotate(90deg);
+  }
+}

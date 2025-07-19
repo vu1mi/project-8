@@ -50,6 +50,14 @@ html.dark {
   --filter-slider-psedu-bg: #292e39;
   --filter-psedu-bg: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(1183%) hue-rotate(183deg)
     brightness(89%) contrast(94%);
+  --filter_theme: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(6157%) hue-rotate(213deg)
+    brightness(114%) contrast(100%);
+
+  // btn
+  --btn-text-color: #1a162e;
+  --btn-theme-shadow: 0;
+  --btn-border-theme: 1px solid transparent;
+  --btn-hover: #fff;
   @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.2);
   }
