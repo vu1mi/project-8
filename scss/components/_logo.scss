@@ -6,9 +6,10 @@
 
   .img-logo {
     @include abstracts.screen(lg) {
+      display: none;
       width: 24px;
       height: 24px;
-      display: block;
+      // display: block;
     }
   }
   @include abstracts.screen(lg) {
@@ -21,5 +22,8 @@
     font-weight: 700;
     line-height: 1.45455; /* 145.455% */
     color: var(--text-color);
+    @include abstracts.screen(lg) {
+      // display: none;
+    }
   }
 }

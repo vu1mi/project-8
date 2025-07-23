@@ -1,3 +1,4 @@
+@use "../abstracts";
 .filter-wrap {
   position: relative;
   z-index: 1;
@@ -13,6 +14,17 @@
   border-radius: 20px;
   transform: opacity, visibility;
   transition-duration: 0.2s;
+  @include abstracts.screen(xl) {
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  @include abstracts.screen(sm) {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+  }
   &.hide {
     opacity: 0;
     visibility: hidden;
@@ -34,6 +46,9 @@
     margin-top: 30px;
     &-row {
       display: flex;
+      @include abstracts.screen(xl) {
+        flex-direction: column;
+      }
     }
   }
 }
@@ -49,6 +64,11 @@
     margin-top: 30px;
     display: flex;
     gap: 30px;
+    @include abstracts.screen(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .filter__form-slider {
       width: 272px;
       height: 2px;
@@ -97,6 +117,13 @@
       padding: 5px 14px;
       border-radius: 6px;
       border: 1px solid #d2d1d6;
+      @include abstracts.screen(sm) {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 20px;
+      }
       .filter__form-select {
         display: flex;
         align-items: center;
@@ -107,6 +134,15 @@
 
         .filter__form-select-arrow {
           filter: var(--filter-color-icon);
+          @include abstracts.screen(sm) {
+            margin-left: 0;
+          }
+        }
+      }
+      .filter__form-select {
+        @include abstracts.screen(sm) {
+          display: flex;
+          justify-content: space-between;
         }
       }
       .filter__form-select:first-child > img {
@@ -120,12 +156,21 @@
         height: 35px;
         background: #d2d1d6;
         margin: 0 14px;
+        @include abstracts.screen(sm) {
+          position: absolute;
+          top: 0;
+          left: 46%;
+        }
       }
     }
     .filter__form-tags {
       display: flex;
       gap: 20px;
-
+      flex-wrap: wrap;
+      @include abstracts.screen(sm) {
+        width: 100%;
+        justify-content: space-between;
+      }
       .filter__form-tag {
         padding: 6px 12px;
         border-radius: 6px;
@@ -141,6 +186,9 @@
       display: flex;
       width: 334px;
       position: relative;
+      @include abstracts.screen(sm) {
+        width: 100%;
+      }
       .filter__form-input {
         width: 100%;
         padding: 10px 16px;
@@ -163,7 +211,11 @@
   justify-content: flex-end;
 
   margin-top: 18px;
-
+  .btn {
+    @include abstracts.screen(md) {
+      flex: 1;
+    }
+  }
   .filter-show {
     padding: 0 10px;
   }
@@ -173,4 +225,9 @@
   height: 162px;
   background: #eee;
   margin: 0 30px;
+  @include abstracts.screen(xl) {
+    width: 100%;
+    height: 1px;
+    margin: 20px auto;
+  }
 }

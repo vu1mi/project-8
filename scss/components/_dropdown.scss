@@ -6,10 +6,20 @@
   position: absolute;
   border-radius: 20px;
   left: 0;
+  height: 100%;
   @include abstracts.screen(lg) {
-    display: block;
+    display: none !important;
     position: initial;
     padding-top: 0;
+    &.show {
+      display: block !important;
+      .top-menu-main .sub-menu {
+        display: none;
+      }
+      .sub-menu {
+        display: block;
+      }
+    }
   }
 
   &--inner {
@@ -22,6 +32,10 @@
     box-shadow: 0px 40px 90px 20px var(--dropdown-shadown-color);
     padding: var(--inner-padding);
     border-radius: 20px;
+
+    @include abstracts.screen(lg) {
+      --max-height-inner: 100%;
+    }
 
     &::before {
       content: url("../icon/dropdown-arrow.svg");
@@ -143,9 +157,6 @@
   &--active .sub-menu {
     display: grid;
   }
-  // &:hover .sub-menu {
-  //   display: grid;
-  // }
 }
 .sub-menu {
   position: absolute;
@@ -183,5 +194,15 @@
     @include abstracts.screen(lg) {
       margin-left: 14px;
     }
+  }
+}
+
+// drop active
+@include abstracts.screen(lg) {
+  .sub-menu {
+    display: none;
+  }
+  .sub-menu.menu-column__item--active {
+    display: block !important;
   }
 }

@@ -14,9 +14,6 @@
 .top_header {
   position: relative;
   @extend %flexItemCenter;
-  @include abstracts.screen(sm) {
-    padding: 0 20px;
-  }
   @include abstracts.screen(lg) {
     justify-content: space-between;
   }
@@ -80,6 +77,9 @@
     &:hover .dropdown {
       display: block;
     }
+    @include abstracts.screen(lg) {
+      width: 100%;
+    }
   }
 
   &__list {
@@ -113,7 +113,10 @@
     height: 12px;
   }
 }
-
+.navbar--item ~ .navbar--item {
+  @include abstracts.screen(lg) {
+  }
+}
 .top-act {
   display: flex;
   gap: 30px;
@@ -123,6 +126,7 @@
   }
   @include abstracts.screen(lg) {
     margin-left: 0;
+    gap: 10px;
   }
 
   .top-act__group {
@@ -175,10 +179,20 @@
     filter: var(--filter_theme);
     transition: transform 1s ease;
   }
+  @include abstracts.screen(lg) {
+    box-shadow: none;
+    .icon-darklight {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 .theme_darklight:hover {
   box-shadow: var(--btn-theme-shadow);
   border-color: var(--btn-hover);
+  @include abstracts.screen(lg) {
+    box-shadow: none;
+  }
   .icon-darklight {
     transform: rotate(90deg);
   }

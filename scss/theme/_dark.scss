@@ -58,6 +58,11 @@ html.dark {
   --btn-theme-shadow: 0;
   --btn-border-theme: 1px solid transparent;
   --btn-hover: #fff;
+
+  // footer
+  --bg-footer: #363c49;
+  --filter-icon-social: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(3734%) hue-rotate(184deg)
+    brightness(96%) contrast(91%);
   @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.2);
   }

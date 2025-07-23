@@ -1,3 +1,10 @@
+@use "../abstracts";
+
+.row-product {
+  @include abstracts.screen(lg) {
+    row-gap: 20px;
+  }
+}
 .product-card {
   border-radius: 20px;
   background-color: var(--product-card-bg);
@@ -9,9 +16,20 @@
     width: 280px;
     height: 284px;
     flex-shrink: 0;
-
+    @include abstracts.screen(xl) {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+    }
+    @include abstracts.screen(md) {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
     .product-card__thumb {
       width: 100%;
+      height: 100%;
     }
     .like-btn {
       position: absolute;

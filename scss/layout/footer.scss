@@ -1,0 +1,96 @@
+@use "../abstracts";
+.footer {
+  background-color: var(--bg-footer);
+  padding: 50px 0 40px;
+}
+.footer-row {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+  gap: 60px;
+  @include abstracts.screen(lg) {
+    grid-template-columns: 1fr;
+  }
+  .footer-col {
+    .logo-footer {
+      display: flex;
+      gap: 14px;
+      .logo-name {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+      }
+    }
+    .logo-dersc {
+      margin-top: 30px;
+      line-height: 1.5;
+      @include abstracts.screen(lg) {
+        width: min(400px, 100%);
+      }
+    }
+    .label-input {
+      margin-top: 40px;
+    }
+    .footer-form {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .input-email {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d2d1d6;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 6px;
+        @include abstracts.screen(lg) {
+          width: min(400px, 100%);
+        }
+      }
+    }
+  }
+}
+
+.footer-col-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.footer-item-list {
+  margin-top: 18px;
+  .footer-item-link {
+    display: block;
+    padding: 8px 0;
+    line-height: 1.4;
+    font-size: 16px;
+    &:hover {
+      color: #77dae6;
+    }
+  }
+
+  .footer-label {
+    margin-top: 18px;
+  }
+}
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  @include abstracts.screen(md) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  .social-list {
+    display: flex;
+    gap: 20px;
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.2s ease;
+      filter: var(--filter-icon-social);
+    }
+    .social-icon:hover {
+      transform: translateY(-10%);
+    }
+  }
+}
