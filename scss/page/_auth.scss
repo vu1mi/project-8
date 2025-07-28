@@ -1,0 +1,225 @@
+@use "../abstracts";
+.auth {
+  display: flex;
+
+  min-height: 100vh;
+  &-intro,
+  &-content {
+    flex: 1;
+    padding: 50px 30px;
+  }
+
+  &-intro {
+    position: relative;
+    background-color: #fafafd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    .auth-img {
+      max-width: 100%;
+    }
+    &-text {
+      max-width: 412px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+      @include abstracts.screen(md) {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+      }
+    }
+    .logo,
+    .auth-intro-next {
+      position: absolute;
+
+      left: 50%;
+      translate: -50%;
+    }
+    .logo {
+      top: 80px;
+    }
+    .auth-intro-next {
+      bottom: 80px;
+    }
+  }
+  &-content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include abstracts.screen(md) {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      overflow-y: auto;
+      translate: 100%;
+      transition: translate 0.5s ease;
+      &.show {
+        translate: 0;
+      }
+    }
+    .Sign-up {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 146.667%;
+    }
+    &-text {
+      max-width: 460px;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+      color: #9e9da8;
+      padding: 0 30px;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.auth-form-input {
+  margin-top: 60px;
+  &:has(:invalid) {
+    .form__submit-btn {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+  .auth-form-group {
+    margin-top: 30px;
+
+    &:has(:invalid):has(.input-form:not(:placeholder-shown)) {
+      .auth-input {
+        border-color: red;
+        background-color: rgba($color: red, $alpha: 0.1);
+      }
+      .icon-input {
+        display: none;
+      }
+      .err-derc,
+      .input-err {
+        display: block;
+      }
+      .input-err {
+        animation: shake 0.5s;
+      }
+    }
+
+    .auth-input {
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 10px;
+      .input-form {
+        border: none;
+        outline: none;
+        flex: 1;
+      }
+      .icon-input {
+        margin-left: 10px;
+      }
+      .input-err {
+        display: none;
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) saturate(100%) invert(33%) sepia(91%) saturate(7499%) hue-rotate(358deg) brightness(95%)
+          contrast(127%);
+        margin-left: 12px;
+      }
+    }
+    .err-derc {
+      display: none;
+      margin-top: 12px;
+      color: red;
+      font-size: 1.5rem;
+      margin-left: 10px;
+    }
+  }
+  .form-group--inline {
+    display: flex;
+    justify-content: space-between;
+    .form__checkbox-label,
+    .auth__link {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 146.667%;
+      color: #9e9da8;
+    }
+    .auth__link {
+      color: #0071dc;
+    }
+    .form__checkbox {
+      display: flex;
+      align-items: center;
+      position: relative;
+      user-select: none;
+      .form__checkbox-label {
+        margin-left: 29px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+      }
+      &::before {
+        width: 19px;
+        height: 19px;
+        border: 1.5px solid #9e9da8;
+        border-radius: 5px;
+      }
+      &:has(:checked) {
+        &::before {
+          background-color: #ffb700;
+          border-color: #ffb700;
+        }
+        &::after {
+          width: 14px;
+          height: 6px;
+          border: 2px solid;
+          border-color: transparent transparent #fff #fff;
+          rotate: -45deg;
+          top: 6px;
+          left: 3px;
+        }
+      }
+    }
+  }
+}
+
+.auth__btn-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.auth-text-link {
+  display: flex;
+  gap: 10px;
+  margin-top: 108px;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+  .link-contact-signin {
+    color: #0071dc;
+  }
+  @include abstracts.screen(md) {
+    margin-top: 60px;
+  }
+}
+
+.signin-text {
+  padding: 0;
+}

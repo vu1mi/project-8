@@ -11,6 +11,13 @@ html {
   --top-act-sepharate: #ededf6;
   --navbar-side: #fff;
   --home-heading: #1a162e;
+  // header
+  --bg-filter-arrow: brightness(0) saturate(100%) invert(94%) sepia(100%) saturate(1%) hue-rotate(334deg)
+    brightness(103%) contrast(101%);
+  --text-dropdown: #1a162e;
+  --dropdown-act-bg: #fff;
+  --dropdown-act-bg-img: #fff;
+
   // dropdown
   --dropdown-bg-color: #fff;
   --dropdown-shadown-color: rgba(200, 200, 200, 0.4);
@@ -59,6 +66,22 @@ html {
 
   // footer
   --bg-footer: #eeeeee;
+
+  // product page
+  --product-page-bg: #fff;
+  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-box-shadow: rgba(237, 237, 246, 0.2);
+  --text-color-product-page: #000;
+  --filter-icon-product-page: brightness(0) saturate(100%) invert(7%) sepia(38%) saturate(1219%) hue-rotate(213deg)
+    brightness(97%) contrast(95%);
+  --pro-info-bg: #f6f6f6;
+  --border-active-item-product: #000;
+  --text-color-active-tab: #1a162e;
+  --review-card-bg: #fafafd;
+  @include abstracts.screen(lg) {
+    --product-demo-bg: #fff;
+    --pro-info-bg: #fff;
+  }
   @include abstracts.screen(lg) {
     --header-bg: #fff;
     --header-shadow: rgba(237, 237, 246, 0.2);

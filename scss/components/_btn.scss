@@ -9,8 +9,14 @@
   color: var(--btn-text-color);
   display: flex;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   + .btn {
-    margin-left: 20px;
+    &:not(.btn--no-margin) {
+      margin-left: 20px;
+    }
   }
 
   &--text {

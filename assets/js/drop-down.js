@@ -3,7 +3,6 @@ column_link = Array.from(column_link);
 column_link.forEach((item) => {
   const subdrop = item.nextElementSibling;
   const classsubdrop = subdrop.classList;
-  console.log(classsubdrop);
 
   item.onclick = () => {
     if (classsubdrop.contains("menu-column__item--active")) {

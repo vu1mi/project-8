@@ -3513,8 +3513,119 @@
     <div class="navbar-overlay js-toggle" toggle-target="#navbar"></div>
 
     <div class="top-act">
-      <a href="./sign-in.html" class="btn btn--text"> Sign In</a>
-      <a href="./sign-up.html" class="btn btn--primary"> Sign Up</a>
+      <div class="top-act__group top-act__group--single d-lg-none">
+        <button class="top-act__btn">
+          <img src="./assets/icon/sreach.svg" alt="" class="icon top-act__icon" />
+        </button>
+      </div>
+
+      <div class="top-act__group d-lg-none">
+        <div class="top-act__wrap">
+          <button class="top-act__btn js-toggle" toggle-target="#dropdown-review">
+            <img src="./assets/icon/heart.svg" alt="" class="icon top-act__icon" />
+            <span class="top-act__title">03</span>
+          </button>
+          <div class="top-act-dropdown hide" id="dropdown-review">
+            <div class="top-act-dropdown--inner">
+              <div class="row row-cols-3">
+                <div class="col">
+                  <div class="dropdown-product-item">
+                    <img src="../assets/img/product-card/product-card-1.png" alt="" class="dropdown-product-img" />
+                    <span class="dropdown-product-title">Lavazza Coffee Blends </span>
+                    <span class="dropdown-product-price">$329.00</span>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="dropdown-product-item">
+                    <img src="../assets/img/product-card/product-card-2.png" alt="" class="dropdown-product-img" />
+                    <span class="dropdown-product-title">Coffee Beans Espresso</span>
+                    <span class="dropdown-product-price">$39.99</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="dropdown-product-item">
+                    <img src="../assets/img/product-card/product-card-2.png" alt="" class="dropdown-product-img" />
+                    <span class="dropdown-product-title">Coffee Beans Espresso</span>
+                    <span class="dropdown-product-price">$39.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-act-sepharate"></div>
+        <div class="top-act__wrap">
+          <button class="top-act__btn js-toggle" toggle-target="#dropdown-total">
+            <img src="./assets/icon/cart.svg" alt="" class="icon top-act__icon" />
+            <span class="top-act__title">$65.42</span>
+          </button>
+          <div class="top-act-dropdown hide" id="dropdown-total">
+            <div class="top-act-dropdown--inner">
+              <div class="top-act-dopdown--top">
+                <h2 class="top-act-dopdown--title">You have 3 item</h2>
+                <a href="" class="top-act-drpodown-more">See All</a>
+              </div>
+              <div class="row row-cols-3">
+                <div class="col">
+                  <div class="dropdown-product-item">
+                    <img src="../assets/img/product-card/product-card-1.png" alt="" class="dropdown-product-img" />
+                    <span class="dropdown-product-title">Lavazza Coffee Blends </span>
+                    <span class="dropdown-product-price">$329.00</span>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="dropdown-product-item">
+                    <img src="../assets/img/product-card/product-card-2.png" alt="" class="dropdown-product-img" />
+                    <span class="dropdown-product-title">Coffee Beans Espresso</span>
+                    <span class="dropdown-product-price">$39.99</span>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="dropdown-product-item">
+                    <img src="../assets/img/product-card/product-card-3.png" alt="" class="dropdown-product-img" />
+                    <span class="dropdown-product-title">Qualità Oro Mountain</span>
+                    <span class="dropdown-product-price">$47.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="top-act-dopdown-sperator"></div>
+              <div class="top-act-dropdown-info-wrap">
+                <span class="dropdown-info-title"> Subtotal:</span>
+                <span class="dropdown-info-price">$415.99</span>
+              </div>
+              <div class="top-act-dropdown-info-wrap">
+                <span class="dropdown-info-title">Texes:</span>
+                <span class="dropdown-info-price">Free</span>
+              </div>
+              <div class="top-act-dropdown-info-wrap">
+                <span class="dropdown-info-title">Shipping</span>
+                <span class="dropdown-info-price">$10.00</span>
+              </div>
+              <div class="top-act-dropdown-info-wrap">
+                <span class="dropdown-info-title-total">Total Price</span>
+                <span class="dropdown-info-price-total">$425.99</span>
+              </div>
+              <div class="top-act-dopdown-sperator"></div>
+              <div class="top-act-dropdown-footer">
+                <button class="btn btn--primary btn--rounded">Check Out All</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-act-user">
+        <img src="./assets/img/top-avt.jpg" alt="" class="top-act-avt" />
+      </div>
+      <button class="theme_darklight">
+        <img src="../assets/icon/icons8-sun-50.svg" alt="" class="icon-darklight" />
+      </button>
     </div>
   </div>
 </div>
+
+<script src="./assets/js/script_theme.js"></script>

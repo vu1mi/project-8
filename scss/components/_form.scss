@@ -1,0 +1,86 @@
+@use "../abstracts";
+.form-sz-weight {
+  &-label {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 145.455%;
+  }
+
+  &-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    @include abstracts.screen(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-sz-weight-wrap {
+      display: flex;
+      padding: 5px 14px;
+      border-radius: 6px;
+      border: 1px solid #d2d1d6;
+      width: 272px;
+      @include abstracts.screen(sm) {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 20px;
+      }
+      .form-sz-weight-select {
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        @include abstracts.screen(sm) {
+          display: flex;
+          justify-content: space-between;
+        }
+        .form-sz-weight-arrow {
+          filter: var(--filter-color-icon);
+          @include abstracts.screen(sm) {
+            margin-left: 0;
+          }
+        }
+      }
+      .form-sz-weight-select:first-child > img {
+        margin-left: 65px;
+      }
+      .form-sz-weight-select:last-child > img {
+        margin-left: 17px;
+      }
+      .form-sz-weight-separation {
+        width: 1px;
+        height: 35px;
+        background: #d2d1d6;
+        margin: 0 14px;
+        @include abstracts.screen(sm) {
+          position: absolute;
+          top: 0;
+          left: 46%;
+        }
+      }
+    }
+  }
+  .form-sz-weight-tags {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    @include abstracts.screen(sm) {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .form-sz-weight-tag {
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #9e9da8;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 142.857%;
+      background: var(--filter-tag-bg);
+    }
+  }
+}

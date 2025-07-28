@@ -1,0 +1,104 @@
+.top-act__wrap {
+  position: relative;
+  .top-act-dropdown {
+    display: none;
+    padding-top: 40px;
+    position: absolute;
+    right: -60px;
+    z-index: 2;
+    &.show {
+      display: block;
+    }
+    &--inner {
+      position: relative;
+      background-color: #fff;
+      padding: 30px;
+      width: 645px;
+      border-radius: 10px;
+      background-color: var(--dropdown-bg-color);
+      &::before {
+        content: url(../../assets/icon/arrow-top.svg);
+        position: absolute;
+        top: -16px;
+        right: 95px;
+        filter: var(--bg-filter-arrow);
+      }
+    }
+    .top-act-dopdown--top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      .top-act-dopdown--title {
+        color: var(--text-color);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+      }
+      .top-act-drpodown-more {
+        color: #0071dc;
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 145.455%;
+      }
+    }
+    .dropdown-product-item {
+      padding-top: 100%;
+      position: relative;
+      .dropdown-product-img {
+        background-color: var(--dropdown-act-bg-img);
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+      .dropdown-product-title {
+        display: inline-block;
+        margin-top: 14px;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+      }
+      .dropdown-product-price {
+        display: inline-block;
+        margin-top: 6px;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+      }
+    }
+    .top-act-dopdown-sperator {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 30px 0;
+    }
+    .top-act-dropdown-info-wrap {
+      display: flex;
+      justify-content: space-between;
+      + .top-act-dropdown-info-wrap {
+        margin-top: 20px;
+      }
+      .dropdown-info-title,
+      .dropdown-info-price {
+        color: var(--text-dropdown);
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145.455%;
+      }
+      .dropdown-info-title-total,
+      .dropdown-info-price-total {
+        color: var(--text-dropdown);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+      }
+    }
+    .top-act-dropdown-footer {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
