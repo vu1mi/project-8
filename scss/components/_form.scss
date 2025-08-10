@@ -14,6 +14,7 @@
       display: flex;
       justify-content: space-between;
     }
+
     .form-sz-weight-wrap {
       display: flex;
       padding: 5px 14px;
@@ -83,4 +84,35 @@
       background: var(--filter-tag-bg);
     }
   }
+}
+
+.form-input-row {
+  display: flex;
+  gap: 20px;
+  & > * {
+    flex: 1;
+  }
+  @include abstracts.screen(md) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.textarea-input {
+  resize: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100px;
+}
+.form-input-adress {
+  display: flex;
+  justify-content: flex-end;
+}
+.label-input-form {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 141.667%;
+  margin-left: 10px;
 }

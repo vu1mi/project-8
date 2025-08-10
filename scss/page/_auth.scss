@@ -97,7 +97,11 @@
   }
   .auth-form-group {
     margin-top: 30px;
-
+    .auth-input {
+      &:focus-within {
+        border-color: #0071dc;
+      }
+    }
     &:has(:invalid):has(.input-form:not(:placeholder-shown)) {
       .auth-input {
         border-color: red;
@@ -125,6 +129,7 @@
         border: none;
         outline: none;
         flex: 1;
+        // background-color: transparent;
       }
       .icon-input {
         margin-left: 10px;
@@ -222,4 +227,14 @@
 
 .signin-text {
   padding: 0;
+}
+.modal-create-adress-title {
+  color: var(--text-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+
+.form-create-adress {
+  margin-top: 20px;
 }

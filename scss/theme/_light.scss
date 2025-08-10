@@ -1,6 +1,7 @@
 @use "../abstracts";
 
 html {
+  --text-input-auto: #000;
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(7%) sepia(48%) saturate(1013%) hue-rotate(213deg) brightness(100%)
     contrast(95%);
@@ -58,18 +59,14 @@ html {
 
   // btn
   --btn-text-color: #1a162e;
-  --btn-theme-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  --btn-border-theme: 1px solid #ccc;
-  --btn-hover: #ccc;
+  --btn-hover: #000;
 
   // footer
   --bg-footer: #eeeeee;
 
   // product page
   --product-page-bg: #fff;
-  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-bg: #fff;
   --breadcrumbs-box-shadow: rgba(237, 237, 246, 0.2);
   --text-color-product-page: #000;
   --filter-icon-product-page: brightness(0) saturate(100%) invert(7%) sepia(38%) saturate(1219%) hue-rotate(213deg)
@@ -78,9 +75,24 @@ html {
   --border-active-item-product: #000;
   --text-color-active-tab: #1a162e;
   --review-card-bg: #fafafd;
+
+  // cheakout
+  --cheackout--color-icon: brightness(0) saturate(100%) invert(74%) sepia(7%) saturate(359%) hue-rotate(206deg)
+    brightness(86%) contrast(83%);
+  --checkout-content-bg: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(0%) sepia(83%) saturate(7468%) hue-rotate(88deg) brightness(104%)
+    contrast(100%);
+  --checkout-text-color: #1a162e;
+  --gift-bg-color: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), #7644e1;
+  --separate-color: #9e9da8;
+  --input-checkbox-bg-icon: brightness(0) saturate(100%) invert(0%) sepia(8%) saturate(7466%) hue-rotate(215deg)
+    brightness(95%) contrast(95%);
+
+  // dialog
+  --bg-modal: #fff;
   @include abstracts.screen(lg) {
     --product-demo-bg: #fff;
-    --pro-info-bg: #fff;
+    // --pro-info-bg: #fff;
   }
   @include abstracts.screen(lg) {
     --header-bg: #fff;

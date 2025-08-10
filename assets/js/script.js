@@ -143,6 +143,7 @@ window.addEventListener("template-loaded", initJsToggle);
 function initJsToggle() {
   $$(".js-toggle").forEach((button) => {
     const target = button.getAttribute("toggle-target");
+
     if (!target) {
       document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
     }

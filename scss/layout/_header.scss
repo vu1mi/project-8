@@ -170,7 +170,7 @@
 }
 
 .theme_darklight {
-  border: var(--btn-border-theme);
+  border: 1px solid transparent;
   padding: 5px;
   border-radius: 8px;
   .icon-darklight {
@@ -188,7 +188,6 @@
   }
 }
 .theme_darklight:hover {
-  box-shadow: var(--btn-theme-shadow);
   border-color: var(--btn-hover);
   @include abstracts.screen(lg) {
     box-shadow: none;
